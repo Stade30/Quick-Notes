@@ -1,13 +1,17 @@
 import Landing from "./routes/landing";
 import { Routes, Route, Navigate } from "react-router-dom";
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<login />} />
-        <Route path="/signup" element={<signup />} />
-      </Routes>
+      <div className="min-h-screen bg-slate-50">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/login" element={<login />} />
+          <Route path="/signup" element={<signup />} />
+        </Routes>
+      </div>
     </>
   );
 }
